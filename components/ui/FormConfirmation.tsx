@@ -41,11 +41,11 @@ export const FormConfirmation = () => {
             }
 
             localStorage.removeItem("newUser");
-            toast.success("Listo se le enviar un SMS con el codigo.", {
+            toast.success("¡Hecho! Hemos validado su número exitosamente.", {
                 position: toast.POSITION.BOTTOM_RIGHT
             });
             setTimeout(() => {
-                push("/confirmation")
+                push("/confirmation-success")
             }, 2000);
 
         }

@@ -108,7 +108,7 @@ export const FormRegister = () => {
                 setItem("newUser", JSON.stringify(newUser))
                 setStateFetch({ ...defaultFetch, isSuccess: true })
 
-                toast.success("Listo se le enviar un SMS con el codigo.", {
+                toast.success("¡Listo! Le hemos enviado un SMS con el código.", {
                     position: toast.POSITION.BOTTOM_RIGHT
                 });
                 setTimeout(() => {
