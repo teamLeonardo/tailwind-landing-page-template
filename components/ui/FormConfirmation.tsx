@@ -12,7 +12,7 @@ export const FormConfirmation = () => {
         password: ""
     }
 
-    const objUser = window.JSON.parse(localStorage.getItem("newUser") || JSON.stringify(defaultValues));
+    const objUser = JSON.parse(localStorage.getItem("newUser") || JSON.stringify(defaultValues));
 
     const number = objUser?.phone || null;
 
