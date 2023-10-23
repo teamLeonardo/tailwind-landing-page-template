@@ -5,18 +5,17 @@ import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 export const FormConfirmation = () => {
-
     const defaultValues = {
         phone: "",
         name: "",
         password: ""
     }
-    const loc = (localStorage as any)
-
-    const objUser = JSON.parse(loc.getItem("newUser") || JSON.stringify(defaultValues));
-
+    let objUser;
+    if (typeof window !== 'undefined') {
+        objUser = JSON.parse(localStorage.getItem("newUser") || JSON.stringify(defaultValues));
+    }
+   
     const number = objUser?.phone || null;
-
 
     const handleSubmit = async (e: any) => {
         e.preventDefault();
