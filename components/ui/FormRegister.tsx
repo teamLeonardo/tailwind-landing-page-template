@@ -113,7 +113,7 @@ export const FormRegister = () => {
                 });
                 setTimeout(() => {
                     push("/confirmation")
-                }, 3000);
+                }, 2000);
             })
             .catch(async function (err) {
                 errorUtils

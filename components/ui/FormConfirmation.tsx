@@ -1,6 +1,7 @@
 'use client'
 
 import { supabase } from "@/services/supabase";
+import { useRouter } from "next/navigation";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -10,6 +11,7 @@ export const FormConfirmation = () => {
         name: "",
         password: ""
     }
+    const { push } = useRouter()
     let objUser;
     if (typeof window !== 'undefined') {
         objUser = JSON.parse(localStorage.getItem("newUser") || JSON.stringify(defaultValues));
@@ -39,6 +41,12 @@ export const FormConfirmation = () => {
             }
 
             localStorage.removeItem("newUser");
+            toast.success("Listo se le enviar un SMS con el codigo.", {
+                position: toast.POSITION.BOTTOM_RIGHT
+            });
+            setTimeout(() => {
+                push("/confirmation")
+            }, 2000);
 
         }
     }
