@@ -11,8 +11,9 @@ export const FormConfirmation = () => {
         name: "",
         password: ""
     }
+    const loc = (localStorage as any)
 
-    const objUser = JSON.parse(localStorage.getItem("newUser") || JSON.stringify(defaultValues));
+    const objUser = JSON.parse(loc.getItem("newUser") || JSON.stringify(defaultValues));
 
     const number = objUser?.phone || null;
 
