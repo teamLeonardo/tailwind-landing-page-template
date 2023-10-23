@@ -37,9 +37,21 @@ export default function Header() {
             {/* Desktop sign in links */}
             <ul className="flex grow justify-end flex-wrap items-center">
               <li>
-                <a className="btn text-white bg-green-600 hover:bg-green-700 w-full mb-4 sm:w-auto sm:mb-0" href="#0">Pruebalo gratis!</a>
+
+                <Link
+                  className="btn 
+                  text-white 
+                  bg-green-600 
+                  hover:bg-green-700 
+                  w-full 
+                  mb-4 
+                  sm:w-auto 
+                  sm:mb-0"
+                  href={"/signup"}
+                >Pruebalo gratis!</Link>
               </li>
-             
+
+
             </ul>
 
           </nav>

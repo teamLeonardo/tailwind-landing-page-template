@@ -1,11 +1,10 @@
 export const metadata = {
-  title: 'Home - Simple',
-  description: 'Page description',
+  title: 'WAMBOT',
+  description: 'Automatiza y Envía Mensajes Masivos en WhatsApp con WhatsAppMasterBot - ¡Descárgalo Ahora!',
 }
 
 import Hero from '@/components/hero'
 import Features from '@/components/features'
-import FeaturesBlocks from '@/components/features-blocks'
 import Testimonials from '@/components/testimonials'
 import Newsletter from '@/components/newsletter'
 
