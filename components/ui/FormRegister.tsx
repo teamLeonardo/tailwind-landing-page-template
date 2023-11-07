@@ -75,53 +75,51 @@ export const FormRegister = () => {
                 }
             });
 
+            console.log("error", error);
+            console.log("data", data);
+
             if (error) {
                 throw error;
             }
 
-            console.log("error", error);
-            console.log("data", data);
 
         }
     }
 
-    const validateFormulario = () => {
+    const validateFormulario = async () => {
         setStateFetch({ ...defaultFetch, isLoad: true })
+        try {
+            const value = await SignupSchema(selectedCountry).validate(objForm)
+            const newUser = {
+                ...value,
+                phone: fullPhone
+            }
+            await supaSingnUp(newUser)
+            setObjForm(newUser)
+            setObjFormError(defaultObjFormError)
+            setItem("newUser", JSON.stringify(newUser))
+            setStateFetch({ ...defaultFetch, isSuccess: true })
 
-        SignupSchema(selectedCountry).validate(objForm)
-            .then(async function (value) {
-                const newUser = {
-                    ...value,
-                    phone: fullPhone
-                }
+            toast.success("¡Listo! Le hemos enviado un SMS con el código.", {
+                position: toast.POSITION.BOTTOM_RIGHT
+            });
+            setTimeout(() => {
+                push("/confirmation")
+            }, 2000);
+               
+        } catch (error) {
+            toast.error("Lo sentimos, paso un error inesperado.", {
+                position: toast.POSITION.TOP_RIGHT
+            });
+            setStateFetch({ ...defaultFetch, isError: true })
 
-                await supaSingnUp(newUser).catch(() => {
-                    toast.error("Lo sentimos, paso un error inesperado.", {
-                        position: toast.POSITION.TOP_RIGHT
-                    });
-                    setStateFetch({ ...defaultFetch, isError: true })
-
-                })
-
-                setObjForm(newUser)
-                setObjFormError(defaultObjFormError)
-                setItem("newUser", JSON.stringify(newUser))
-                setStateFetch({ ...defaultFetch, isSuccess: true })
-
-                toast.success("¡Listo! Le hemos enviado un SMS con el código.", {
-                    position: toast.POSITION.BOTTOM_RIGHT
-                });
-                setTimeout(() => {
-                    push("/confirmation")
-                }, 2000);
+            errorUtils
+            .buildError(error)
+            .then((data) => {
+                setObjFormError({ ...defaultObjFormError, ...data })
             })
-            .catch(async function (err) {
-                errorUtils
-                    .buildError(err)
-                    .then((data) => {
-                        setObjFormError({ ...defaultObjFormError, ...data })
-                    })
-            })
+        }
+
 
     }
 
