@@ -12,7 +12,7 @@ export default function Donwload() {
                 <div className="text-center">
                     <TabsDonwload />
                 </div>
-                <div className="grid grid-rows-2 grid-cols-1 md:grid-cols-[45%,55%]  gap-4">
+                <div className="grid grid-rows-2 grid-cols-1 md:grid-rows-1 md:grid-cols-[45%,55%]  gap-4">
                     <div className="relative flex flex-col justify-center">
                         <div className="mt-20">
                             <div className="grid grid-cols-[80px,1fr] gap-2">

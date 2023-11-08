@@ -67,7 +67,7 @@ export const FormRegister = () => {
     const supaSingnUp = async (newUser: any) => {
         if (typeof newUser.phone === "string" && newUser.phone.length > 0) {
 
-            let { data, error } = await supabase.auth.signUp({
+            let { error } = await supabase.auth.signUp({
                 phone: newUser.phone,
                 password: newUser.password,
                 options: {
@@ -75,8 +75,6 @@ export const FormRegister = () => {
                 }
             });
 
-            console.log("error", error);
-            console.log("data", data);
 
             if (error) {
                 throw error;
@@ -89,7 +87,7 @@ export const FormRegister = () => {
     const validateFormulario = async () => {
         setStateFetch({ ...defaultFetch, isLoad: true })
         try {
-            const value = await SignupSchema(selectedCountry).validate(objForm)
+            const { password, confirmPasswords, ...value } = await SignupSchema(selectedCountry).validate(objForm)
             const newUser = {
                 ...value,
                 phone: fullPhone
@@ -106,7 +104,7 @@ export const FormRegister = () => {
             setTimeout(() => {
                 push("/confirmation")
             }, 2000);
-               
+
         } catch (error) {
             toast.error("Lo sentimos, paso un error inesperado.", {
                 position: toast.POSITION.TOP_RIGHT
@@ -114,10 +112,10 @@ export const FormRegister = () => {
             setStateFetch({ ...defaultFetch, isError: true })
 
             errorUtils
-            .buildError(error)
-            .then((data) => {
-                setObjFormError({ ...defaultObjFormError, ...data })
-            })
+                .buildError(error)
+                .then((data) => {
+                    setObjFormError({ ...defaultObjFormError, ...data })
+                })
         }
 
 

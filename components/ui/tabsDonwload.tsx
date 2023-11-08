@@ -23,13 +23,13 @@ export const TabsDonwload = () => {
             </div>
             <div className={getClass(1 === active).bgLayout}></div>
         </div>
-        <div className="grid cursor-pointer relative pb-2 px-3" onClick={() => setActive(2)}>
+        <div className="grid cursor-no-drop relative pb-2 px-3" >
             <div className={getClass(2 === active).textLayout}>
                 macOS
             </div>
             <div className={getClass(2 === active).bgLayout}></div>
         </div>
-        <div className="grid cursor-pointer relative pb-2 px-3" onClick={() => setActive(3)}>
+        <div className="grid cursor-no-drop relative pb-2 px-3">
             <div className={getClass(3 === active).textLayout}>
                 Linux
             </div>

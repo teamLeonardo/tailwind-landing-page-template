@@ -22,7 +22,7 @@ export default function Features() {
 
   const renderClassList = (num: number) => tab !== num ? 'bg-white shadow-md border-gray-200 hover:shadow-lg' : 'bg-gradient-to-br from-lime-100 to-green-300 border-transparent'
   return (
-    <section className="relative">
+    <section className="relative mb-32">
 
       {/* Section background (needs .relative class on parent and next sibling elements) */}
       <div className="absolute inset-0 bg-gray-100 pointer-events-none mb-16" aria-hidden="true"></div>
