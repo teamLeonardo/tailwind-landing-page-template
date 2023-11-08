@@ -16,6 +16,14 @@
     }
 }
 
+
+.text-primary {
+    /* -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to top left, var(--tw-gradient-stops)); */
+}
+
 .lamp {
     position: absolute;
     top: 50%;

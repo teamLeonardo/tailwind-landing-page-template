@@ -63,21 +63,41 @@ export default function MobileMenu() {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <ul className="px-5 py-2">
+          <ul className="px-5 py-2 h-full flex flex-col justify-center gap-6">
             <li>
               <Link
-                className="btn 
-                  text-white 
-                  bg-green-600 
-                  hover:bg-green-700 
-                  w-full 
-                  mb-4 
-                  sm:w-auto 
-                  sm:mb-0"
+                className="btn
+                w-full
+                rounded-full
+                bg-gradient-to-tl from-lime-200 to-green-600
+                hover:bg-gradient-to-tl
+                border-none
+                [box-shadow:2px_2px_6px_#c2c2c2,_-2px_-2px_6px_#ffffff]
+                active:bg-gradient-to-tl
+                active:from-green-600
+                active:to-lime-200
+                active:[box-shadow:inset_5px_5px_10px_#117f3a,_inset_-2px_-2px_10px_#fcffb6]
+                text-white
+                "
                 href={"/signup"}
-              >Pruebalo gratis!</Link>
+              >Registrate</Link>
             </li>
-
+            <li>
+              <Link
+                className="btn
+                w-full
+                rounded-full
+                hover:bg-gradient-to-tl
+                border
+                border-green-600
+                [box-shadow:2px_2px_6px_#c2c2c2,_-2px_-2px_6px_#ffffff]
+                active:bg-gradient-to-tl
+                active:[box-shadow:inset_3px_3px_6px_#c2c2c2,_inset_-2px_-2px_10px_#ffffff]
+                text-green-600
+                "
+                href={"/download"}
+              >Descargalo !</Link>
+            </li>
           </ul>
         </Transition>
       </div>
