@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google'
 import Header from '@/components/ui/header'
 import { Metadata } from 'next'
 import Favicon from "@/public/images/icon-bot-master.png"
+import metaImg from "@/public/images/wambor-page.png"
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
@@ -21,12 +22,12 @@ export const metadata: Metadata = {
     siteName: 'WAMBOT',
     images: [
       {
-        url: ".",
+        url: metaImg.src,
         width: 800,
         height: 600,
       },
       {
-        url: 'https://nextjs.org/og-alt.png',
+        url: metaImg.src,
         width: 1800,
         height: 1600,
         alt: 'My custom alt',
