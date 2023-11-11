@@ -71,7 +71,10 @@ export const FormRegister = () => {
                 phone: newUser.phone,
                 password: newUser.password,
                 options: {
-                    data: newUser
+                    data: {
+                        name: newUser.name,
+                        phone: newUser.phone
+                    }
                 }
             });
 
@@ -87,7 +90,7 @@ export const FormRegister = () => {
     const validateFormulario = async () => {
         setStateFetch({ ...defaultFetch, isLoad: true })
         try {
-            const { password, confirmPasswords, ...value } = await SignupSchema(selectedCountry).validate(objForm)
+            const value = await SignupSchema(selectedCountry).validate(objForm)
             const newUser = {
                 ...value,
                 phone: fullPhone
