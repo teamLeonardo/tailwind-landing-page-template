@@ -4,8 +4,8 @@ import { useState, useRef, useEffect } from 'react'
 import { Transition } from '@headlessui/react'
 import Image from 'next/image'
 import BgW1 from '@/public/images/w-1.png'
-import BgW2 from '@/public/images/w-1.png'
-import BgW3 from '@/public/images/w-1.png'
+import BgW2 from '@/public/images/w-2.png'
+import BgW3 from '@/public/images/w-3.png'
 
 export default function Features() {
 
@@ -119,7 +119,7 @@ export default function Features() {
                   >
                     <div className="relative inline-flex flex-col">
                       <Image
-                        className="md:max-w-none mx-auto rounded"
+                        className="md:max-w-none mx-auto rounded invisible"
                         src={BgW1.src} width={500} height="462" alt="Features bg"
                       />
                       <Image
@@ -143,7 +143,7 @@ export default function Features() {
                     unmount={false}
                   >
                     <div className="relative inline-flex flex-col">
-                      <Image className="md:max-w-none mx-auto rounded" src={BgW2.src} width={500} height="462" alt="Features bg" />
+                      <Image className="md:max-w-none mx-auto rounded invisible" src={BgW2.src} width={500} height="462" alt="Features bg" />
                       <Image className="md:max-w-none absolute w-full left-0 transform animate-float" src={BgW2.src} width={500} height="44" alt="Element" style={{ top: '30%' }} />
                     </div>
                   </Transition>
@@ -162,7 +162,7 @@ export default function Features() {
                     unmount={false}
                   >
                     <div className="relative inline-flex flex-col">
-                      <Image className="md:max-w-none mx-auto rounded" src={BgW3.src} width={500} height="462" alt="Features bg" />
+                      <Image className="md:max-w-none mx-auto rounded invisible" src={BgW3.src} width={500} height="462" alt="Features bg" />
                       <Image className="md:max-w-none absolute w-full left-0 transform animate-float" src={BgW3.src} width={500} height="44" alt="Element" style={{ top: '30%' }} />
                     </div>
                   </Transition>
