@@ -120,11 +120,11 @@ export default function Features() {
                     <div className="relative inline-flex flex-col">
                       <Image
                         className="md:max-w-none mx-auto rounded"
-                        src={BgW1} width={500} height="462" alt="Features bg"
+                        src={BgW1.src} width={500} height="462" alt="Features bg"
                       />
                       <Image
                         className="md:max-w-none absolute w-full left-0 transform animate-float"
-                        src={BgW1} width={500} height="44" alt="Element" style={{ top: '30%' }}
+                        src={BgW1.src} width={500} height="44" alt="Element" style={{ top: '30%' }}
                       />
                     </div>
                   </Transition>
@@ -143,8 +143,8 @@ export default function Features() {
                     unmount={false}
                   >
                     <div className="relative inline-flex flex-col">
-                      <Image className="md:max-w-none mx-auto rounded" src={BgW2} width={500} height="462" alt="Features bg" />
-                      <Image className="md:max-w-none absolute w-full left-0 transform animate-float" src={BgW2} width={500} height="44" alt="Element" style={{ top: '30%' }} />
+                      <Image className="md:max-w-none mx-auto rounded" src={BgW2.src} width={500} height="462" alt="Features bg" />
+                      <Image className="md:max-w-none absolute w-full left-0 transform animate-float" src={BgW2.src} width={500} height="44" alt="Element" style={{ top: '30%' }} />
                     </div>
                   </Transition>
                   {/* Item 3 */}
@@ -162,8 +162,8 @@ export default function Features() {
                     unmount={false}
                   >
                     <div className="relative inline-flex flex-col">
-                      <Image className="md:max-w-none mx-auto rounded" src={BgW3} width={500} height="462" alt="Features bg" />
-                      <Image className="md:max-w-none absolute w-full left-0 transform animate-float" src={BgW3} width={500} height="44" alt="Element" style={{ top: '30%' }} />
+                      <Image className="md:max-w-none mx-auto rounded" src={BgW3.src} width={500} height="462" alt="Features bg" />
+                      <Image className="md:max-w-none absolute w-full left-0 transform animate-float" src={BgW3.src} width={500} height="44" alt="Element" style={{ top: '30%' }} />
                     </div>
                   </Transition>
                 </div>
