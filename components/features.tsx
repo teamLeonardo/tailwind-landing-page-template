@@ -9,21 +9,29 @@ import BgW3 from '@/public/images/w-3.png'
 
 export default function Features() {
 
-  const [tab, setTab] = useState<number>(1)
+  const [tab, setTab] = useState<number>(0)
 
   const tabs = useRef<HTMLDivElement>(null)
 
   const heightFix = () => {
-    if (tabs.current && tabs.current.parentElement) tabs.current.parentElement.style.height = `${tabs.current.clientHeight}px`
+    if (tabs.current && tabs.current.parentElement) {
+      tabs.current.parentElement.style.height = `${tabs.current.clientHeight}px`
+    }
   }
 
   useEffect(() => {
     heightFix()
   }, [])
 
-  const renderClassList = (num: number) => tab !== num ? 'bg-white shadow-md border-gray-200 hover:shadow-lg' : 'bg-gradient-to-br from-lime-100 to-green-300 border-transparent'
+  useEffect(() => {
+    if (tab > 0) {
+      window.scrollTo(0, document.body.scrollHeight);
+    }
+  }, [tab])
+
+  const renderClassList = (num: number) => tab !== num ? 'bg-white animate-pulse shadow-md border-gray-200 hover:shadow-lg' : 'bg-gradient-to-br from-lime-100 to-green-300 border-transparent'
   return (
-    <section className="relative mb-32">
+    <section id="layers" className="relative mb-32">
 
       {/* Section background (needs .relative class on parent and next sibling elements) */}
       <div className="absolute inset-0 bg-gray-100 pointer-events-none mb-16" aria-hidden="true"></div>
@@ -33,8 +41,8 @@ export default function Features() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h2 mb-4">Explora WhatsAppMasterBot</h1>
-            <p className="text-xl text-gray-600">
+            <h1 className="h4 lg:h2 mb-4">Explora WhatsAppMasterBot</h1>
+            <p className="text-xl text-start text-gray-600">
               WhatsAppMasterBot es una herramienta revolucionaria que automatiza WhatsApp, simplifica las conversaciones, permite el envío masivo y personaliza mensajes para mejorar la productividad y el compromiso.
             </p>
           </div>
@@ -51,7 +59,7 @@ export default function Features() {
               <div className="mb-8 md:mb-0">
                 <a
                   className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${renderClassList(1)}`}
-                  href="#0"
+                  href="#speet1"
                   onClick={(e) => { e.preventDefault(); setTab(1); }}
                 >
                   <div>
@@ -68,7 +76,7 @@ export default function Features() {
                 </a>
                 <a
                   className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${renderClassList(2)}`}
-                  href="#0"
+                  href="#speet1"
                   onClick={(e) => { e.preventDefault(); setTab(2); }}
                 >
                   <div>
@@ -83,7 +91,7 @@ export default function Features() {
                 </a>
                 <a
                   className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${renderClassList(3)}`}
-                  href="#0"
+                  href="#speet1"
                   onClick={(e) => { e.preventDefault(); setTab(3); }}
                 >
                   <div>
@@ -100,7 +108,7 @@ export default function Features() {
             </div>
 
             {/* Tabs items */}
-            <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 md:order-1">
+            <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 md:order-1" id='speet1'>
               <div className="transition-all">
                 <div className="relative flex flex-col text-center lg:text-right" data-aos="zoom-y-out" ref={tabs}>
                   {/* Item 1 */}

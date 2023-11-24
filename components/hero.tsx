@@ -33,14 +33,14 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         {/* Hero content */}
-        <div className="pt-32 pb-12 md:pt-10 md:pb-20">
+        <div className="pt-1 pb-12 md:pt-10 md:pb-20">
 
           {/* Section header */}
           <div className="text-center pb-12 md:pb-16">
-            <h1 className="text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4" data-aos="zoom-y-out">
+            <h1 className="text-3xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4" data-aos="zoom-y-out">
               Envío Masivo y Automatización
               <span
-                className="bg-clip-text text-transparent bg-gradient-to-tl from-lime-200 to-green-600 "
+                className="bg-clip-text text-2xl md:text-6xl text-transparent bg-gradient-to-tl from-lime-200 to-green-600 "
               >
                 {" "} WhatsAppMasterBot
               </span>
@@ -68,7 +68,7 @@ export default function Hero() {
                   >Pruebalo gratis!</Link>
                 </div>
                 <div>
-                  <a className="btn text-white bg-gray-900 hover:bg-gray-800 w-full sm:w-auto sm:ml-4" href="#0">Leer mas</a>
+                  <a className="btn text-white bg-gray-900 hover:bg-gray-800 w-full sm:w-auto sm:ml-4" href="#layers">Leer mas</a>
                 </div>
               </div>
             </div>

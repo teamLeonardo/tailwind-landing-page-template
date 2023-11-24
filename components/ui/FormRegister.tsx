@@ -189,27 +189,41 @@ export const FormRegister = () => {
                 </div>
             </div>
             <div className="flex flex-wrap -mx-3 mb-4">
-                <div className="w-full px-3">
+                <div className="w-full px-3 relative">
                     <label
                         className="block text-gray-800 text-sm font-medium mb-1"
                         htmlFor="password"
                     >
+                        <div className="block relative lg:absolute lg:left-full lg:top-0">
+                            <div className="shadow-xl border mb-4 border-gray-300 w-full lg:w-[300px] max-h-xl overflow-auto p-1">
+                                La contraseña tiene que contener al menos 1 numero, 1 Mayuscula, 1 Minuscula, 1 Simbolo y tener un minimo de 8 caracteres. <br />
+                                <div className="inline-flex gap-2  text-xs">
+                                    Ejem: <pre className="text-green-600 font-bold text-sm">@Lucho123</pre>
+                                </div>
+                            </div>
+                        </div>
                         Contraseña <span className="text-red-600">*</span>
+
                     </label>
                     <input
                         id="password"
                         type="password"
                         name='password'
                         className="form-input w-full text-gray-800"
-                        placeholder="Introduce tu contraseña"
+                        placeholder="Ejemplo: @Lucho123"
                         required
                         defaultValue={objForm.password}
                         value={objForm.password}
                         onChange={(event) => handleChange({ [event.target.name]: event.target.value })}
                     />
-                    {objFormError.password?.length > 0 && <span className="text-red-600">
-                        {objFormError.password}
-                    </span>}
+                    {
+                        objFormError.password?.length > 0 && (
+                            <span className="text-red-600">
+                                {objFormError.password}
+                            </span>
+                        )
+                    }
+
                 </div>
             </div>
             <div className="flex flex-wrap -mx-3 mb-4">
@@ -225,7 +239,7 @@ export const FormRegister = () => {
                         type="password"
                         name='confirmPasswords'
                         className="form-input w-full text-gray-800"
-                        placeholder="Repita la contraseña"
+                        placeholder="Repita Ejemplo: @Lucho123"
                         required
                         defaultValue={objForm.confirmPasswords}
                         value={objForm.confirmPasswords}
