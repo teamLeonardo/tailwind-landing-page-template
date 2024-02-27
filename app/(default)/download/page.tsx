@@ -70,9 +70,9 @@ export default function Donwload() {
                         <div className="relative">
                             <div className="wt-row wt-row_size_s rs-text-3 rs-text-3_theme_light">
                                 <div className="wt-col-inline wt-col-sm-12 wt-offset-top-12">
-                                    <p className="jb-text-nowrap">Version: 2023.11.8</p>
-                                    <p className="jb-text-nowrap">Build: 0.0.1</p>
-                                    <p className="jb-text-nowrap">8 Noviembre 2023</p>
+                                    <p className="jb-text-nowrap">Version: 2024.1.8</p>
+                                    <p className="jb-text-nowrap">Build: 0.1.4</p>
+                                    <p className="jb-text-nowrap">8 Enero 2023</p>
                                 </div>
 
                             </div>
