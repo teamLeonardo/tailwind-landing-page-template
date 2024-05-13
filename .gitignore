@@ -14,6 +14,7 @@
 
 # production
 /build
+public/ejecutables/wambot.exe
 
 # misc
 .DS_Store

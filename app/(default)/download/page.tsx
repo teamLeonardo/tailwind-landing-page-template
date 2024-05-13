@@ -31,7 +31,7 @@ export default function Donwload() {
                         </div>
                         <div className="mt-8 ">
                             <a
-                                href="/ejecutables/wambot-beta-1.0.1-setup.exe"
+                                href="/ejecutables/wambot.exe"
                                 download
                                 className="btn
                                 w-[200px]
