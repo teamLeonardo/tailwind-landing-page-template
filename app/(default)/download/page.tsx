@@ -32,7 +32,6 @@ export default function Donwload() {
                         <div className="mt-8 ">
                             <a
                                 href="https://drive.google.com/file/d/1D-MCKe17PjTBMAPgKJyaQjwOm9ei_s40/view?usp=sharing"
-                                download
                                 className="btn
                                 w-[200px]
                                 rounded-full
