@@ -21,7 +21,7 @@ export default function Donwload() {
                                 </div>
                                 <div className="flex items-center">
                                     <h1 className="font-bold text-4xl text-slate-700">
-                                        WAMbot BETA
+                                        WAMbot Injector
                                     </h1>
                                 </div>
                             </div>
@@ -31,7 +31,8 @@ export default function Donwload() {
                         </div>
                         <div className="mt-8 ">
                             <a
-                                href="https://drive.google.com/file/d/1D-MCKe17PjTBMAPgKJyaQjwOm9ei_s40/view?usp=sharing"
+                                href="./ejecutables/extension-wambot.zip"
+                                download="extension-wambot.zip"
                                 className="btn
                                 w-[200px]
                                 rounded-full
@@ -46,32 +47,17 @@ export default function Donwload() {
                                 text-white
                                 "
                             >
-                                Descargar .exe
+                               Instalar extensión
                             </a>
                         </div>
                     </div>
                     <div className="relative grid grid-rows-[1fr,auto]">
-                        <div className="max-w-[200%] md:max-w-2xl fixed -rotate-12 md:relative mx-auto my-10 drop-shadow-2xl">
-                            <div className="w-full h-11 rounded-t-lg bg-gray-200 flex justify-start items-center space-x-1.5 px-3">
-                                <span className="w-3 h-3 rounded-full bg-red-400"></span>
-                                <span className="w-3 h-3 rounded-full bg-yellow-400"></span>
-                                <span className="w-3 h-3 rounded-full bg-green-400"></span>
-                            </div>
-                            <div className="relative bg-gray-700 border-t-0 rounded-b-lg w-full h-96">
-                                <img
-                                    src="/images/wambot-walp.png"
-                                    alt="IntelliJ IDEA Ultimate"
-                                    className="w-[200%] md:w-auto md:h-full relative"
-                                />
-                            </div>
-                        </div>
-
                         <div className="relative">
                             <div className="wt-row wt-row_size_s rs-text-3 rs-text-3_theme_light">
                                 <div className="wt-col-inline wt-col-sm-12 wt-offset-top-12">
-                                    <p className="jb-text-nowrap">Version: 2024.1.8</p>
-                                    <p className="jb-text-nowrap">Build: 0.1.4</p>
-                                    <p className="jb-text-nowrap">8 Enero 2023</p>
+                                    <p className="jb-text-nowrap">Version: 0.3.0</p>
+                                    <p className="jb-text-nowrap">Build: 0.3</p>
+                                    <p className="jb-text-nowrap">14 Junio 2024</p>
                                 </div>
 
                             </div>
